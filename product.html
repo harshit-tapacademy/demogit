@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — Shop</title>
+  <meta name="description" content="View product specifications, pricing, reviews and add items to your cart on Shop.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Persistent Left Navigation Rail -->
+  <aside class="left-nav-rail" aria-label="Main Navigation">
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">shop</a>
+    </div>
+    
+    <nav class="nav-links-stack">
+      <!-- Home Link -->
+      <a href="index.html" class="nav-item" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="tooltip">Home</span>
+      </a>
+
+      <!-- Men's Collection Link -->
+      <a href="men.html" target="_blank" class="nav-item" aria-label="Men's Collection">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M12 2v9"/>
+          <path d="M8 5h8"/>
+        </svg>
+        <span class="tooltip">Men's wear</span>
+      </a>
+
+      <!-- Women's Collection Link -->
+      <a href="women.html" target="_blank" class="nav-item" aria-label="Women's Collection">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/>
+          <path d="M12 14v8"/>
+          <path d="M9 17h6"/>
+        </svg>
+        <span class="tooltip">Women's wear</span>
+      </a>
+
+      <!-- Kids wear Link -->
+      <a href="kids.html" target="_blank" class="nav-item" aria-label="Kids wear Collection">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span class="tooltip">Kids wear</span>
+      </a>
+
+      <!-- Cart Link -->
+      <a href="#" class="nav-item" aria-label="Shopping Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span class="tooltip">Cart</span>
+      </a>
+
+      <!-- Profile Link (Opens in new tab) -->
+      <a href="profile.html" target="_blank" class="nav-item" aria-label="User Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span class="tooltip">Account</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Content Layout -->
+  <div class="main-layout">
+
+    <!-- Breadcrumbs & Details Frame -->
+    <div class="page-container" style="margin-top: var(--spacing-32);">
+      <div style="font-size: var(--text-caption); color: var(--color-slate); margin-bottom: var(--spacing-8); letter-spacing: -0.018em;">
+        <a href="index.html">Home</a> / <span id="breadcrumb-category" style="text-transform: capitalize;">Category</span> / <span id="breadcrumb-title" style="color: var(--color-ink-black);">Product Name</span>
+      </div>
+
+      <!-- Main product layout resembling Amazon -->
+      <main class="product-details-container">
+        
+        <!-- Left Side: Interactive Gallery -->
+        <section class="product-gallery">
+          <div class="gallery-thumbnails" id="gallery-thumbs-list">
+            <!-- Thumbnails generated dynamically -->
+          </div>
+          <div class="gallery-main-img">
+            <img id="gallery-main-img-el" src="" alt="Main product photo">
+          </div>
+        </section>
+
+        <!-- Center: Detailed Information -->
+        <section class="product-info-panel">
+          <span class="product-brand" id="info-brand-el">Shop Originals</span>
+          <h1 class="product-title-large" id="info-title-el">Product Title Loading...</h1>
+          
+          <div class="product-rating-box">
+            <div class="star-rating-stars" id="info-stars-el" style="display: flex; color: #ffb800;">
+              <!-- 5 Stars dynamically color filled -->
+            </div>
+            <span class="product-rating-num" id="info-rating-val">4.5</span>
+            <span style="color: var(--color-concrete);">|</span>
+            <span class="star-rating-count" id="info-reviews-val" style="font-size: var(--text-body-sm); color: var(--color-slate); font-weight: var(--font-weight-regular); letter-spacing: 0;">245 reviews</span>
+          </div>
+
+          <div class="product-price-large" id="info-price-el">₹0</div>
+
+          <p class="product-description-txt" id="info-desc-el">
+            Product description details loading...
+          </p>
+
+          <h2 style="font-size: var(--text-body); text-transform: uppercase; font-weight: var(--font-weight-medium); margin-bottom: var(--spacing-8); letter-spacing: -0.018em;">Specifications</h2>
+          <table class="product-specs-table" id="info-specs-table-el">
+            <!-- Key value rows generated dynamically -->
+          </table>
+        </section>
+
+        <!-- Right Side: Buy / Checkout Card -->
+        <section class="product-action-card">
+          <div class="action-price-row">
+            <span class="product-price-large" id="action-price-el" style="margin-bottom: var(--spacing-8); font-size: 24px;">₹0</span>
+            <span class="stock-status">In Stock</span>
+            <span style="font-size: 11px; color: var(--color-slate); margin-top: 4px;">Delivered in 2-3 business days.</span>
+          </div>
+
+          <div class="qty-select-row">
+            <span class="qty-select-label">Qty:</span>
+            <select class="qty-dropdown" id="action-qty-el">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <div class="action-buttons-wrap">
+            <button class="btn-add-to-cart" id="action-add-btn">Add to Bag</button>
+            <button class="btn-buy-now" id="action-buy-btn">Buy Now</button>
+          </div>
+
+          <div style="border-top: 1px solid var(--color-hairline); padding-top: var(--spacing-16); font-size: var(--text-caption); color: var(--color-slate); line-height: 1.4;">
+            <p style="margin-bottom: 4px;"><strong>Secure transaction:</strong> Your data is encrypted and secure.</p>
+            <p><strong>Returns:</strong> Eligible for refund or replacement within 10 days of delivery.</p>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="page-container">
+        <div class="footer-grid">
+          
+          <!-- Column 1 -->
+          <div class="footer-column">
+            <h3 class="footer-column-heading">Shop</h3>
+            <ul class="footer-links-list">
+              <li><a href="men.html" target="_blank" class="footer-link">Men's Collection</a></li>
+              <li><a href="women.html" target="_blank" class="footer-link">Women's Collection</a></li>
+              <li><a href="kids.html" target="_blank" class="footer-link">Kids wear</a></li>
+              <li><a href="#" class="footer-link">New Arrivals</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="footer-column">
+            <h3 class="footer-column-heading">Support</h3>
+            <ul class="footer-links-list">
+              <li><a href="#" class="footer-link">Order Status</a></li>
+              <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+              <li><a href="#" class="footer-link">Size Guide</a></li>
+              <li><a href="#" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="footer-column">
+            <h3 class="footer-column-heading">Company</h3>
+            <ul class="footer-links-list">
+              <li><a href="#" class="footer-link">About Us</a></li>
+              <li><a href="#" class="footer-link">Sustainability</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+              <li><a href="#" class="footer-link">Press</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="footer-column">
+            <h3 class="footer-column-heading">Newsletter</h3>
+            <p style="font-size: var(--text-caption); color: var(--color-slate); margin-bottom: var(--spacing-12); line-height: 1.4;">
+              Sign up for early access, product drops, and design insights.
+            </p>
+            <form style="display: flex; gap: var(--spacing-8);" action="#" method="POST">
+              <input style="flex-grow: 1; border: 1px solid var(--color-hairline); border-radius: var(--radius-lg); height: 40px; padding: 0 var(--spacing-12); font-size: var(--text-body-sm); outline: none;" type="email" placeholder="Email Address" required>
+              <button style="background-color: var(--color-ink-black); color: var(--color-pure-white); border-radius: var(--radius-lg); height: 40px; padding: 0 var(--spacing-16); font-size: var(--text-caption); text-transform: uppercase; font-weight: var(--font-weight-medium);" type="submit">Join</button>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">&copy; 2026 Shop Inc. Powered by Shopify. All rights reserved.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2 .1-2.9.2-.9 1.6-6.9 1.6-6.9s-.4-.8-.4-2c0-1.9 1.1-3.3 2.5-3.3 1.2 0 1.7.9 1.7 1.9 0 1.2-.8 3-1.2 4.6-.3 1.4.7 2.5 2.1 2.5 2.5 0 4.4-2.6 4.4-6.4 0-3.3-2.4-5.7-5.8-5.7-4 0-6.3 3-6.3 6 0 1.2.5 2.5 1 3.1.1.1.1.2.1.3l-.4 1.7c-.1.2-.2.3-.5.2-1.7-.8-2.7-3.3-2.7-5.3 0-4.3 3.1-8.3 9-8.3 4.7 0 8.4 3.4 8.4 7.9 0 4.7-3 8.5-7.1 8.5-1.4 0-2.7-.7-3.2-1.6 0 0-.7 2.6-.9 3.3-.3 1.2-1.2 2.8-1.8 3.8.9.3 1.9.4 3 .4 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Get product ID from URL query parameters
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get('id');
+
+      if (!productId) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      // 2. Query product from DB
+      const product = window.getProductById ? window.getProductById(productId) : null;
+      if (!product) {
+        document.body.innerHTML = '<div style="padding: 100px; text-align: center; font-size: 20px;">Product not found. <a href="index.html">Return home</a></div>';
+        return;
+      }
+
+      // 3. Render Breadcrumbs
+      document.getElementById('breadcrumb-category').innerText = product.category;
+      document.getElementById('breadcrumb-category').parentElement.firstElementChild.href = `index.html`;
+      document.getElementById('breadcrumb-title').innerText = product.title;
+
+      // 4. Render product information
+      document.getElementById('info-brand-el').innerText = `Shop ${product.category.toUpperCase()}`;
+      document.getElementById('info-title-el').innerText = product.title;
+      document.getElementById('info-rating-val').innerText = product.rating;
+      document.getElementById('info-reviews-val').innerText = `${product.reviewCount} ratings`;
+      
+      const priceString = '₹' + product.price.toLocaleString('en-IN');
+      document.getElementById('info-price-el').innerText = priceString;
+      document.getElementById('action-price-el').innerText = priceString;
+      
+      document.getElementById('info-desc-el').innerText = product.description;
+
+      // 5. Render rating stars
+      const starsEl = document.getElementById('info-stars-el');
+      let starsHtml = '';
+      for (let i = 0; i < 5; i++) {
+        starsHtml += `
+          <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: ${i < Math.round(product.rating) ? '#ffb800' : '#c9cbcc'}; margin-right: 2px;">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>
+        `;
+      }
+      starsEl.innerHTML = starsHtml;
+
+      // 6. Render Specifications Table
+      const specsTable = document.getElementById('info-specs-table-el');
+      let specsHtml = '';
+      for (const [key, value] of Object.entries(product.specs)) {
+        specsHtml += `
+          <tr>
+            <td class="spec-label">${key}</td>
+            <td class="spec-value">${value}</td>
+          </tr>
+        `;
+      }
+      specsTable.innerHTML = specsHtml;
+
+      // 7. Render Images Gallery
+      const mainImgEl = document.getElementById('gallery-main-img-el');
+      const thumbsListEl = document.getElementById('gallery-thumbs-list');
+      
+      // Set initial main image
+      mainImgEl.src = product.images[0];
+      mainImgEl.alt = product.title;
+
+      // Generate thumbnails HTML
+      let thumbsHtml = '';
+      product.images.forEach((imgUrl, idx) => {
+        thumbsHtml += `
+          <div class="thumb-item ${idx === 0 ? 'active' : ''}" data-index="${idx}" onclick="changeActiveImage(this, '${imgUrl}')">
+            <img src="${imgUrl}" alt="${product.title} view ${idx + 1}">
+          </div>
+        `;
+      });
+      thumbsListEl.innerHTML = thumbsHtml;
+
+      // 8. Add to Bag event listener
+      const addBtn = document.getElementById('action-add-btn');
+      addBtn.addEventListener('click', () => {
+        const qtySelect = document.getElementById('action-qty-el');
+        const quantity = parseInt(qtySelect.value) || 1;
+        if (window.addToCart) {
+          window.addToCart(product.id, quantity);
+        }
+      });
+
+      // 9. Buy Now event listener
+      const buyBtn = document.getElementById('action-buy-btn');
+      buyBtn.addEventListener('click', () => {
+        const qtySelect = document.getElementById('action-qty-el');
+        const quantity = parseInt(qtySelect.value) || 1;
+        if (window.addToCart) {
+          window.addToCart(product.id, quantity);
+          if (window.openCart) {
+            window.openCart();
+          }
+        }
+      });
+    });
+
+    // Swap main gallery image
+    function changeActiveImage(thumbEl, imgUrl) {
+      // Set main image src
+      document.getElementById('gallery-main-img-el').src = imgUrl;
+      
+      // Remove active class from other thumbnails
+      const thumbs = document.querySelectorAll('.thumb-item');
+      thumbs.forEach(thumb => thumb.classList.remove('active'));
+      
+      // Add active class to clicked thumbnail
+      thumbEl.classList.add('active');
+    }
+  </script>
+</body>
+</html>
